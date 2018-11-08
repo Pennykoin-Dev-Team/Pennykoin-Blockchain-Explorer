@@ -1,7 +1,7 @@
 remote:
   host: "s229.admin"
   user: "admin"
-  path: "/home/admin/test.easypool.pro"
+  path: "/home/admin/test.easypool.pro/be"
   port: "2188"
 behaviour:
   uploadOnSave: true
@@ -12,7 +12,6 @@ behaviour:
 option:
   deleteFiles: true
   exclude: [
-    ".sync-config.cson"
     ".git"
     "node_modules"
     "tmp"
