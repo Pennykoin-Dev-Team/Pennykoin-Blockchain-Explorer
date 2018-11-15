@@ -92,7 +92,7 @@
         });
         poolsRefreshed++;
         if (poolsRefreshed === NETWORK_STAT_MAP.size){
-            setTimeout(function(){ displayChart(); }, 1000);
+            setTimeout(function(){ displayChart(); }, 3000);
         }
     });
 
@@ -161,7 +161,7 @@
         NETWORK_STAT_MAP.forEach((url, host, map) => {
             $.getJSON(url + '/stats', (data, textStatus, jqXHR) => {
                 updateText('height'+host, data.network.height);
-                updateText('hashrate'+host, data.pool.hashrate);
+                updateText('hashrate'+host, getReadableHashRateString(data.pool.hashrate));
                 updateText('miners'+host, data.pool.miners);
                 updateText('totalFree'+host, calculateTotalFee(data)+'%');
                 var d = new Date(parseInt(data.pool.lastBlockFound));
@@ -179,10 +179,10 @@
             });
             poolsRefreshed++;
             if (poolsRefreshed === NETWORK_STAT_MAP.size){
-                setTimeout(function(){ refreshChart(); }, 1000);
+                setTimeout(function(){ refreshChart(); }, 3000);
             }
         });
-    }, 240000);
+    }, 120000);
 
     function refreshChart() {
         var pool_rows = $('#pools_rows').children();

@@ -12,6 +12,7 @@ var networkStat = {
       ["walpool.com/pk","https://api.walpool.com/rpc/pennyk"],
       ["getpool.org/pk","https://api.getpool.org/rpc/pk"],
       ["youpool.io/PK","https://pool.pennykoin.com/youpoolio"],
-      ["communitypool.org/pk","https://communitypool.org:8121"]
+      ["communitypool.org/pk","https://communitypool.org:8121"],
+      ["pennykoin.fairhash.org","https://pennykoin.fairhash.org/api"]
     ]
 };
