@@ -16,4 +16,5 @@ option:
     "node_modules"
     "tmp"
     "vendor"
+    ".sync-config.cson"
   ]
